@@ -11,14 +11,19 @@ on:
       - dev
 
 jobs:
-  run-linters:
-    name: Run linters
-    runs-on: ubuntu-latest
+  avoid-redundant-workflows:
+    name: Avoid redundant workflows
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Cancel Workflow Action
         uses: styfle/cancel-workflow-action@0.12.1
 
+  lint:
+    name: Lint
+    runs-on: ubuntu-20.04
+
+    steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
 
