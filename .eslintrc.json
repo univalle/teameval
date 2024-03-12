@@ -1,9 +1,6 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "./node_modules/ts-standard/eslintrc.json"
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  }
+    "./node_modules/standard/eslintrc.json"
+  ]
 }
