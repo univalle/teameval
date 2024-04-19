@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
 
@@ -100,7 +99,7 @@ function login () {
                 Inicio de sesion
               </button>
 
-              <Link href={'/recuperarclave'} style={{ marginBottom: '32px' }}>
+              <Link href='/recuperarclave' style={{ marginBottom: '32px' }}>
                 Recuperar contraseña
               </Link>
             </div>
