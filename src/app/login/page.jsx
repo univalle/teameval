@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import '/styles/styles.css'
 import Link from 'next/link'
 
 function login () {
@@ -20,7 +19,7 @@ function login () {
           }}
         >
           <img
-            src='/images/loginestudiantes.png'
+            src='/images/loginestudiantes.jpg'
             alt='estudiantes'
             style={{ width: '580px', height: '641px' }}
           />
