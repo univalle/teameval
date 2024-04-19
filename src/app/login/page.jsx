@@ -1,6 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
 
+
+//TODO COLORES PERSONALIZADOS DE LA APLICACION SEGUN EL MOCKUP
+// customRed
+//customBlack
+//customGrey
+//activeCustomRed
+
 function login () {
   return (
     <html>
@@ -89,11 +96,12 @@ function login () {
               />
 
               <button
-                className='px-4 py-2 font-bold bg-red-500 hover:bg-red-700 textwhite'
+                className='px-4 py-2 font-bold bg-customRed hover:bg-red-600 textwhite'
                 style={{
                   marginBottom: '18px',
                   borderRadius: '8px',
                   width: '450px'
+              
                 }}
               >
                 Inicio de sesion
