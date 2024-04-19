@@ -1,12 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 
-
-//TODO COLORES PERSONALIZADOS DE LA APLICACION SEGUN EL MOCKUP
+// TODO COLORES PERSONALIZADOS DE LA APLICACION SEGUN EL MOCKUP
 // customRed
-//customBlack
-//customGrey
-//activeCustomRed
+// customBlack
+// customGrey
+// activeCustomRed
 
 function login () {
   return (
@@ -101,7 +100,7 @@ function login () {
                   marginBottom: '18px',
                   borderRadius: '8px',
                   width: '450px'
-              
+
                 }}
               >
                 Inicio de sesion
