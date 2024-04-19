@@ -12,7 +12,7 @@ function login() {
     
     <html>
       <head>
-        <title>Login</title>
+        <title>login</title>
       
       
       </head>
