@@ -6,7 +6,7 @@ export default function Home () {
   return (
     <div className='grid grid-cols-5'>
       <Sidebar />
-      <div className='col-span-4 pl-4 pr-8 mt-10'>
+      <div className='col-span-5 pl-4 pr-8 mt-10 xl:col-span-4'>
         <h1 className='text-3xl font-semibold tracking-tight scroll-m-20'>
           Grupos activos
         </h1>
