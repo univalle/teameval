@@ -5,7 +5,7 @@ export function ProgramsList () {
   const programs = [
     {
       programTitle: 'Matemáticas Avanzadas',
-      date: '2024/01/01',
+      semester: '2022 - 1',
       subjectName: 'Matemáticas Avanzadas',
       membersCount: '4/4',
       professor: 'Dr. Juan Pérez',
@@ -15,7 +15,7 @@ export function ProgramsList () {
     },
     {
       programTitle: 'Matemáticas Avanzadas',
-      date: '2024/01/01',
+      semester: '2022 - 1',
       subjectName: 'Matemáticas Avanzadas',
       membersCount: '4/4',
       professor: 'Dr. Juan Pérez',
@@ -25,7 +25,7 @@ export function ProgramsList () {
     },
     {
       programTitle: 'Matemáticas Avanzadas',
-      date: '2024/01/01',
+      semester: '2022 - 1',
       subjectName: 'Matemáticas Avanzadas',
       membersCount: '4/4',
       professor: 'Dr. Juan Pérez',
@@ -35,7 +35,7 @@ export function ProgramsList () {
     },
     {
       programTitle: 'Matemáticas Avanzadas',
-      date: '2024/01/01',
+      semester: '2022 - 1',
       subjectName: 'Matemáticas Avanzadas',
       membersCount: '4/4',
       professor: 'Dr. Juan Pérez',
@@ -52,7 +52,7 @@ export function ProgramsList () {
         <ProgramCard
           key={index} // Utilizamos el índice como clave (key) única
           programTitle={program.programTitle}
-          date={program.date}
+          semester={program.semester}
           subjectName={program.subjectName}
           membersCount={program.membersCount}
           professor={program.professor}

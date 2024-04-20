@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button'
 
 export function ProgramCard ({
   programTitle,
-  date,
+  semester,
   subjectName,
   membersCount,
   professor,
@@ -22,7 +22,9 @@ export function ProgramCard ({
     <Card>
       <CardHeader className='flex flex-row items-center justify-between py-3 text-center text-white rounded-t-lg bg-primary'>
         <CardTitle className='text-base'>{programTitle}</CardTitle>
-        <CardDescription className='text-sm text-white'>{date}</CardDescription>
+        <CardDescription className='text-sm text-white'>
+          {semester}
+        </CardDescription>
       </CardHeader>
       <CardContent className='pb-3'>
         <div className='flex items-center justify-between mt-4 mb-2 '>
@@ -37,7 +39,7 @@ export function ProgramCard ({
       </CardContent>
       <CardFooter className='flex justify-between p-6 py-0 pb-4'>
         <Button variant='outline'>Eliminar</Button>
-        <Button variant='outline'>Entrar</Button>
+        <Button>Entrar</Button>
       </CardFooter>
     </Card>
   )
