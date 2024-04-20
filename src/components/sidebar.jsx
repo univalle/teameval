@@ -2,7 +2,7 @@ export function Sidebar () {
   return (
     <aside
       id='sidebar'
-      className='fixed top-0 left-0 z-40 w-64 h-screen transition-transform'
+      className='w-64 h-screen transition-transform '
       aria-label='Sidebar'
     >
       <div className='flex flex-col h-full px-3 py-4 overflow-y-auto bg-white border-r border-slate-200 dark:border-slate-700 dark:bg-slate-900'>

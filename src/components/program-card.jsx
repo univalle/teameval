@@ -36,8 +36,8 @@ export function ProgramCard ({
         <p className='text-sm'>{description}</p>
       </CardContent>
       <CardFooter className='flex justify-between p-6 py-0 pb-4'>
-        <Button>Eliminar</Button>
-        <Button variant='black'>Entrar</Button>
+        <Button variant='outline'>Eliminar</Button>
+        <Button variant='outline'>Entrar</Button>
       </CardFooter>
     </Card>
   )
