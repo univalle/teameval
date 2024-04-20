@@ -1,7 +1,4 @@
-import { Inter } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Teameval',
@@ -10,8 +7,17 @@ export const metadata = {
 
 export default function RootLayout ({ children }) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>{children}</body>
+    <html lang='es'>
+      <head>
+        <link
+          rel='shortcut icon'
+          href='/images/favicon.ico'
+          type='image/x-icon'
+        />
+      </head>
+      <body>
+        <div className='container px-0 border-x '>{children}</div>
+      </body>
     </html>
   )
 }
