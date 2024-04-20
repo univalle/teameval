@@ -12,9 +12,15 @@ export default function RootLayout ({ children }) {
   return (
     <html lang='es'>
       <head>
-        <link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon' />
+        <link
+          rel='shortcut icon'
+          href='/images/favicon.ico'
+          type='image/x-icon'
+        />
       </head>
-      <body className={`${inter.styles} w-full xl:w-[1000px] mx-auto mt-4`}>{children}</body>
+      <body className={`${inter.styles} w-full xl:w-[1000px] mx-auto mt-4`}>
+        {children}
+      </body>
     </html>
   )
 }
