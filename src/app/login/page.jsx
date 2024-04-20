@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { Login } from '@/components/login'
 // TODO COLORES PERSONALIZADOS DE LA APLICACION SEGUN EL MOCKUP
 // customRed
