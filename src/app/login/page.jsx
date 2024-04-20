@@ -11,13 +11,13 @@ function login () {
       <img
         src='/images/loginestudiantes.jpg'
         alt='estudiantes'
-        className='hidden w-full h-auto md:max-h-full xl:block'
+        className='hidden w-full h-[85vh] md:max-h-full xl:block'
       />
       <div className='flex flex-col items-center justify-center p-8 bg-white'>
         <img
           src='/images/logoteameval.png'
           alt='logo team eval'
-          className='w-24 h-24 mb-8'
+          className='object-cover w-24 h-24 mb-8'
         />
         <div className='flex flex-col items-center'>
           <Login />
