@@ -87,7 +87,7 @@ export function Sidebar ({ activeItem }) {
             </Link>
           </li>
           <li>
-            <a
+            <Link
               href='/login'
               className={`flex items-center px-3 py-2 rounded-lg text-slate-900 ${
                 activeItem === 'item6' ? 'bg-[#fadede]' : ''
@@ -97,7 +97,7 @@ export function Sidebar ({ activeItem }) {
               <span className='flex-1 ml-3 whitespace-nowrap'>
                 Cerrar sesión
               </span>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
