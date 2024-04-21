@@ -31,7 +31,7 @@ export function Login () {
         </form>
       </CardContent>
       <CardFooter className='flex flex-col space-y-1.5'>
-        <Link href={'/admin'} className='block'>
+        <Link href='/admin' className='block'>
           <Button className='w-[400px]'>Inciar sesión</Button>
         </Link>
         <a href='#' className='text-sm font-semibold'>
