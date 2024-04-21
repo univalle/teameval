@@ -42,11 +42,74 @@ export function ProgramsList () {
       group: 'Grupo A',
       description:
         'Este programa cubrirá temas avanzados en cálculo y álgebra lineal.'
+    },
+    {
+      programTitle: 'Matemáticas Avanzadas',
+      semester: '2022 - 1',
+      subjectName: 'Matemáticas Avanzadas',
+      membersCount: '4/4',
+      professor: 'Dr. Juan Pérez',
+      group: 'Grupo A',
+      description:
+        'Este programa cubrirá temas avanzados en cálculo y álgebra lineal.'
+    },
+    {
+      programTitle: 'Matemáticas Avanzadas',
+      semester: '2022 - 1',
+      subjectName: 'Matemáticas Avanzadas',
+      membersCount: '4/4',
+      professor: 'Dr. Juan Pérez',
+      group: 'Grupo A',
+      description:
+        'Este programa cubrirá temas avanzados en cálculo y álgebra lineal.'
+    },
+    {
+      programTitle: 'Matemáticas Avanzadas',
+      semester: '2022 - 1',
+      subjectName: 'Matemáticas Avanzadas',
+      membersCount: '4/4',
+      professor: 'Dr. Juan Pérez',
+      group: 'Grupo A',
+      description:
+        'Este programa cubrirá temas avanzados en cálculo y álgebra lineal.'
+    },
+    {
+      programTitle: 'Matemáticas Avanzadas',
+      semester: '2022 - 1',
+      subjectName: 'Matemáticas Avanzadas',
+      membersCount: '4/4',
+      professor: 'Dr. Juan Pérez',
+      group: 'Grupo A',
+      description:
+        'Este programa cubrirá temas avanzados en cálculo y álgebra lineal.'
+    },
+    {
+      programTitle: 'Matemáticas Avanzadas',
+      semester: '2022 - 1',
+      subjectName: 'Matemáticas Avanzadas',
+      membersCount: '4/4',
+      professor: 'Dr. Juan Pérez',
+      group: 'Grupo A',
+      description:
+        'Este programa cubrirá temas avanzados en cálculo y álgebra lineal.'
+    },
+    {
+      programTitle: 'Matemáticas Avanzadas',
+      semester: '2022 - 1',
+      subjectName: 'Matemáticas Avanzadas',
+      membersCount: '4/4',
+      professor: 'Dr. Juan Pérez',
+      group: 'Grupo A',
+      description:
+        'Este programa cubrirá temas avanzados en cálculo y álgebra lineal.'
     }
   ]
 
   return (
-    <div className='grid grid-cols-1 gap-10 pt-10 sm:grid-cols-2 md:grid-cols-3'>
+    <div
+      className='grid grid-cols-1 gap-10 px-2 pt-2 mt-6 overflow-auto rounded sm:grid-cols-2 md:grid-cols-3 bg-slate-100'
+      style={{ maxHeight: 'calc(100vh - 200px)' }}
+    >
       {/* Utilizamos map para recorrer el array de programas */}
       {programs.map((program, index) => (
         <ProgramCard
