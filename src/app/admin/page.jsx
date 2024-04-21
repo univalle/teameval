@@ -30,3 +30,5 @@ export default function Home ({ searchParams }) {
     </div>
   )
 }
+
+export const runtime = 'edge'
