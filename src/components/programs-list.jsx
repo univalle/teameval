@@ -62,46 +62,6 @@ export function ProgramsList () {
       group: 'Grupo A',
       description:
         'Este programa cubrirá temas avanzados en cálculo y álgebra lineal.'
-    },
-    {
-      programTitle: 'Matemáticas Avanzadas',
-      semester: '2022 - 1',
-      subjectName: 'Matemáticas Avanzadas',
-      membersCount: '4/4',
-      professor: 'Dr. Juan Pérez',
-      group: 'Grupo A',
-      description:
-        'Este programa cubrirá temas avanzados en cálculo y álgebra lineal.'
-    },
-    {
-      programTitle: 'Matemáticas Avanzadas',
-      semester: '2022 - 1',
-      subjectName: 'Matemáticas Avanzadas',
-      membersCount: '4/4',
-      professor: 'Dr. Juan Pérez',
-      group: 'Grupo A',
-      description:
-        'Este programa cubrirá temas avanzados en cálculo y álgebra lineal.'
-    },
-    {
-      programTitle: 'Matemáticas Avanzadas',
-      semester: '2022 - 1',
-      subjectName: 'Matemáticas Avanzadas',
-      membersCount: '4/4',
-      professor: 'Dr. Juan Pérez',
-      group: 'Grupo A',
-      description:
-        'Este programa cubrirá temas avanzados en cálculo y álgebra lineal.'
-    },
-    {
-      programTitle: 'Matemáticas Avanzadas',
-      semester: '2022 - 1',
-      subjectName: 'Matemáticas Avanzadas',
-      membersCount: '4/4',
-      professor: 'Dr. Juan Pérez',
-      group: 'Grupo A',
-      description:
-        'Este programa cubrirá temas avanzados en cálculo y álgebra lineal.'
     }
   ]
 
