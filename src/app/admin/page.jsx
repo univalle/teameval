@@ -1,21 +1,32 @@
 import { Sidebar } from '@/components/sidebar'
-import { Filters } from '@/components/filters'
-import { ProgramsList } from '@/components/programs-list'
+import { ActiveGroups } from '@/components/admin/active-groups'
+import { RegisterProfessor } from '@/components/admin/register-professor'
+import { RegisterStudent } from '@/components/admin/register-student'
+import { RegisterCourse } from '@/components/admin/register-course'
+import { ImportStudents } from '@/components/admin/import-students'
 
-export default function Home () {
+export default function Home ({ searchParams }) {
+  const { active } = searchParams
+  let activeComponent
+
+  if (active === 'item1') {
+    activeComponent = <ActiveGroups />
+  } else if (active === 'item2') {
+    activeComponent = <RegisterProfessor />
+  } else if (active === 'item3') {
+    activeComponent = <RegisterStudent />
+  } else if (active === 'item4') {
+    activeComponent = <RegisterCourse />
+  } else if (active === 'item5') {
+    activeComponent = <ImportStudents />
+  } else {
+    activeComponent = <ActiveGroups />
+  }
+
   return (
     <div className='grid grid-cols-5 min-h-[85vh]'>
-      <Sidebar />
-      <div className='col-span-5 pl-4 pr-8 mt-10 xl:col-span-4'>
-        <h1 className='text-3xl font-semibold tracking-tight scroll-m-20'>
-          Grupos activos
-        </h1>
-        <h3 className='mb-4 text-lg text-muted-foreground text-slate-500'>
-          <span>Nombre/número de grupo:</span>
-        </h3>
-        <Filters />
-        <ProgramsList />
-      </div>
+      <Sidebar activeItem={active ?? 'item1'} />
+      {activeComponent}
     </div>
   )
 }

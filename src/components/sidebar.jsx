@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import { GroupIcon, HomeIcon, SettingsIcon } from './icons'
 
-export function Sidebar () {
+export function Sidebar ({ activeItem }) {
   return (
     <aside
       id='sidebar'
@@ -21,64 +22,76 @@ export function Sidebar () {
         </div>
         <ul className='space-y-2 text-sm font-medium'>
           <li>
-            <a
-              href='#'
-              className='flex items-center px-3 py-2 rounded-lg text-slate-900 bg-[#fadede] dark:text-white dark:hover:bg-slate-700'
+            <Link
+              href='?active=item1'
+              className={`flex items-center px-3 py-2 rounded-lg text-slate-900 ${
+                activeItem === 'item1' ? 'bg-[#fadede]' : ''
+              }  dark:text-white hover:bg-[#fadede]`}
             >
               <HomeIcon />
               <span className='flex-1 ml-3 whitespace-nowrap'>
                 Grupos activos
               </span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href='#'
-              className='flex items-center px-3 py-2 rounded-lg text-slate-900 hover:bg-[#fadede] dark:text-white dark:hover:bg-slate-700'
+            <Link
+              href='?active=item2'
+              className={`flex items-center px-3 py-2 rounded-lg text-slate-900 ${
+                activeItem === 'item2' ? 'bg-[#fadede]' : ''
+              }  dark:text-white hover:bg-[#fadede]`}
             >
               <GroupIcon />
               <span className='flex-1 ml-3 whitespace-nowrap'>
                 Registar profesores
               </span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href='#'
-              className='flex items-center px-3 py-2 rounded-lg text-slate-900 hover:bg-[#fadede] dark:text-white dark:hover:bg-slate-700'
+            <Link
+              href='?active=item3'
+              className={`flex items-center px-3 py-2 rounded-lg text-slate-900 ${
+                activeItem === 'item3' ? 'bg-[#fadede]' : ''
+              }  dark:text-white hover:bg-[#fadede]`}
             >
               <GroupIcon />
               <span className='flex-1 ml-3 whitespace-nowrap'>
                 Registrar estudiantes
               </span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href='#'
-              className='flex items-center px-3 py-2 rounded-lg text-slate-900 hover:bg-[#fadede] dark:text-white dark:hover:bg-slate-700'
+            <Link
+              href='?active=item4'
+              className={`flex items-center px-3 py-2 rounded-lg text-slate-900 ${
+                activeItem === 'item4' ? 'bg-[#fadede]' : ''
+              }  dark:text-white hover:bg-[#fadede]`}
             >
               <SettingsIcon />
               <span className='flex-1 ml-3 whitespace-nowrap'>
                 Registrar cursos
               </span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href='#'
-              className='flex items-center px-3 py-2 rounded-lg text-slate-900 hover:bg-[#fadede] dark:text-white dark:hover:bg-slate-700'
+            <Link
+              href='?active=item5'
+              className={`flex items-center px-3 py-2 rounded-lg text-slate-900 ${
+                activeItem === 'item5' ? 'bg-[#fadede]' : ''
+              }  dark:text-white hover:bg-[#fadede]`}
             >
               <SettingsIcon />
               <span className='flex-1 ml-3 whitespace-nowrap'>
                 Importar estudiantes
               </span>
-            </a>
+            </Link>
           </li>
           <li>
             <a
-              href='#'
-              className='flex items-center px-3 py-2 rounded-lg text-slate-900 hover:bg-[#fadede] dark:text-white dark:hover:bg-slate-700'
+              href='/login'
+              className={`flex items-center px-3 py-2 rounded-lg text-slate-900 ${
+                activeItem === 'item6' ? 'bg-[#fadede]' : ''
+              }  dark:text-white hover:bg-[#fadede]`}
             >
               <SettingsIcon />
               <span className='flex-1 ml-3 whitespace-nowrap'>
