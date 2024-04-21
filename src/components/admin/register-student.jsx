@@ -18,7 +18,7 @@ export function RegisterStudent () {
       </h1>
       <div className='flex justify-center pb-4'>
         <Card className='w-[600px] border-0'>
-          <CardContent>
+          <CardContent className='pt-4'>
             <form>
               <div className='grid items-center w-full gap-4'>
                 <div className='flex flex-col space-y-1.5'>
