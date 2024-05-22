@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { GroupIcon, HomeIcon, SettingsIcon } from './icons'
 import { MenuItem } from './menu-item'
 
@@ -20,16 +19,15 @@ export function Sidebar ({ activeItem }) {
             <span className='ml-3 text-2xl font-semibold'>Bienvenido</span>
             <span className='text-2xl font-semibold text-primary'>Admin</span>
           </h3>
-        
+
         </div>
         <ul className='space-y-2 text-sm font-medium'>
-          
-          <MenuItem activeItem={activeItem} label={'Grupos activos'} link={'?active=item1'} icon={<HomeIcon/>} number={'item1'}  />
-          <MenuItem activeItem={activeItem} label={'Registrar profesores'} link={'?active=item2'} icon={<HomeIcon/>} number={'item2'}  />
-          <MenuItem activeItem={activeItem} label={'Registrar estudiantes'} link={'?active=item3'} icon={<HomeIcon/>} number={'item3'}  />
-          <MenuItem activeItem={activeItem} label={'Registrar cursos'} link={'?active=item4'} icon={<HomeIcon/>} number={'item4'}  />
-          <MenuItem activeItem={activeItem} label={'Cerrar sesión'} link={'/login'} icon={<HomeIcon/>} number={'item5'}  />
-          
+
+          <MenuItem activeItem={activeItem} label='Grupos activos' link='?active=item1' icon={<HomeIcon />} number='item1' />
+          <MenuItem activeItem={activeItem} label='Registrar profesores' link='?active=item2' icon={<HomeIcon />} number='item2' />
+          <MenuItem activeItem={activeItem} label='Registrar estudiantes' link='?active=item3' icon={<GroupIcon />} number='item3' />
+          <MenuItem activeItem={activeItem} label='Registrar cursos' link='?active=item4' icon={<SettingsIcon />} number='item4' />
+          <MenuItem activeItem={activeItem} label='Cerrar sesión' link='/login' icon={<HomeIcon />} number='item5' />
 
         </ul>
       </div>
