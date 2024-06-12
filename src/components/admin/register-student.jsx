@@ -1,16 +1,26 @@
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardFooter } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue
-} from '@/components/ui/select'
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import useRegisterStudent from '@/hooks/useRegisterStudent';
 
-export function RegisterStudent () {
+export function RegisterStudent() {
+  const { registerStudent, loading } = useRegisterStudent();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    const resetForm = () => {
+      e.target.reset();
+    };
+
+    await registerStudent(data, resetForm);
+  };
+
   return (
     <div className='col-span-5 pl-4 pr-8 mt-10 xl:col-span-4'>
       <h1 className='mb-4 text-3xl font-semibold tracking-tight scroll-m-20'>
@@ -19,54 +29,56 @@ export function RegisterStudent () {
       <div className='flex justify-center pb-4'>
         <Card className='w-[600px] border-0'>
           <CardContent className='pt-4'>
-            <form>
-              <div className='grid items-center w-full gap-4'>
+            <form onSubmit={handleSubmit}>
+              <div className='grid items-center w-full gap-4 mb-4'>
                 <div className='flex flex-col space-y-1.5'>
                   <Label htmlFor='name'>Nombres</Label>
-                  <Input id='name' placeholder='José' />
+                  <Input id='name' name='name' placeholder='José' required />
                 </div>
                 <div className='flex flex-col space-y-1.5'>
                   <Label htmlFor='lastname'>Apellidos</Label>
-                  <Input id='lastname' placeholder='Pérez' />
+                  <Input id='lastname' name='lastname' placeholder='Pérez' required />
                 </div>
                 <div className='flex flex-col space-y-1.5'>
                   <Label htmlFor='email'>Correo electrónico</Label>
-                  <Input id='email' placeholder='ejemplo@gmail.com' />
+                  <Input id='email' name='email' placeholder='ejemplo@gmail.com' required />
                 </div>
                 <div className='flex flex-col space-y-1.5'>
                   <Label htmlFor='password'>Contraseña</Label>
-                  <Input id='password' placeholder='••••••••' />
+                  <Input id='password' name='password' type='password' placeholder='••••••••' required />
                 </div>
                 <div className='flex flex-col space-y-1.5'>
-                  <Label htmlFor='password2'>Confirmar constraseña</Label>
-                  <Input id='password2' placeholder='••••••••' />
+                  <Label htmlFor='password2'>Confirmar contraseña</Label>
+                  <Input id='password2' name='password2' type='password' placeholder='••••••••' required />
                 </div>
                 <div className='flex flex-col space-y-1.5'>
-                  <Label htmlFor='document'>Tipo de documento</Label>
-                  <Select>
-                    <SelectTrigger id='document'>
+                  <Label htmlFor='type'>Tipo de documento</Label>
+                  <Select id='type' name='type' required>
+                    <SelectTrigger>
                       <SelectValue placeholder='Seleccionar' />
                     </SelectTrigger>
                     <SelectContent position='popper'>
                       <SelectItem value='cedula'>Cédula</SelectItem>
-                      <SelectItem value='tarjeta identidad'>
-                        Tarjeta de identidad
-                      </SelectItem>
+                      <SelectItem value='tarjeta identidad'>Tarjeta de identidad</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <div className='flex flex-col space-y-1.5'>
-                  <Label htmlFor='cod'>Código</Label>
-                  <Input id='cod' placeholder='1234567' />
+                  <Label htmlFor='document'>Documento</Label>
+                  <Input id='document' name='document' placeholder='1234567' required />
+                </div>
+                <div className='flex flex-col space-y-1.5'>
+                  <Label htmlFor='code'>Código</Label>
+                  <Input id='code' name='code' placeholder='1234567' required />
                 </div>
                 <div className='flex flex-col space-y-1.5'>
                   <Label htmlFor='phone'>Teléfono</Label>
-                  <Input id='phone' placeholder='230 123 45 67' />
+                  <Input id='phone' name='phone' placeholder='230 123 45 67' required />
                 </div>
                 <div className='flex flex-col space-y-1.5'>
                   <Label htmlFor='gender'>Género</Label>
-                  <Select>
-                    <SelectTrigger id='gender'>
+                  <Select id='gender' name='gender' required>
+                    <SelectTrigger>
                       <SelectValue placeholder='Seleccionar' />
                     </SelectTrigger>
                     <SelectContent position='popper'>
@@ -77,13 +89,15 @@ export function RegisterStudent () {
                   </Select>
                 </div>
               </div>
+              <CardFooter>
+                <Button type='submit' className='w-full' disabled={loading}>
+                  {loading ? 'Creando...' : 'Crear'}
+                </Button>
+              </CardFooter>
             </form>
           </CardContent>
-          <CardFooter>
-            <Button className='w-full'>Crear</Button>
-          </CardFooter>
         </Card>
       </div>
     </div>
-  )
+  );
 }

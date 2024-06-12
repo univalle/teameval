@@ -71,9 +71,9 @@ export function Sidebar ({ activeItem }) {
                 activeItem === 'item4' ? 'bg-[#fadede]' : ''
               }  dark:text-white hover:bg-[#fadede]`}
             >
-              <SettingsIcon />
+              <GroupIcon />
               <span className='flex-1 ml-3 whitespace-nowrap'>
-                Registrar cursos
+                Registrar administradores
               </span>
             </Link>
           </li>
@@ -86,7 +86,7 @@ export function Sidebar ({ activeItem }) {
             >
               <SettingsIcon />
               <span className='flex-1 ml-3 whitespace-nowrap'>
-                Importar estudiantes
+                Registrar cursos
               </span>
             </Link>
           </li>

@@ -1,6 +1,7 @@
 import './globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
+import { Toaster } from '@/components/ui/toaster'
 
 export const metadata = {
   title: 'Teameval',
@@ -25,6 +26,7 @@ export default function RootLayout ({ children }) {
             <Footer />
           </div>
         </div>
+        <Toaster />
       </body>
     </html>
   )

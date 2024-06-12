@@ -8,8 +8,10 @@ import { Label } from '@/components/ui/label';
 import Link from 'next/link';
 import useAuthRedirect from '@/hooks/useAuthRedirect';
 import useLogin from '@/hooks/useLogin';
+import { useToast } from './ui/use-toast';
 
 export function Login() {
+  const { toast } = useToast();
   const { login, loading, error } = useLogin();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -17,7 +19,17 @@ export function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     login(email, password);
+
+    if (error) {
+      toast({
+        title: 'Error al iniciar sesión',
+        description: 'El usuario o la contraseña son incorrectos.',
+        status: 'error',
+      });
+    }
+
   };
+
 
   useAuthRedirect();
 
@@ -31,15 +43,14 @@ export function Login() {
           <div className='grid items-center w-full gap-4'>
             <div className='flex flex-col space-y-1.5'>
               <Label htmlFor='user'>Usuario</Label>
-              <Input id='user' placeholder='ejemplo@gmail.com' value={email} onChange={(e) => setEmail(e.target.value)} />
+              <Input id='user' placeholder='ejemplo@gmail.com' value={email} onChange={(e) => setEmail(e.target.value)} required/>
             </div>
             <div className='flex flex-col space-y-1.5 mb-4'>
               <Label htmlFor='password'>Contraseña</Label>
-              <Input id='password' type='password' placeholder='••••••••' value={password} onChange={(e) => setPassword(e.target.value)} />
+              <Input id='password' type='password' placeholder='••••••••' value={password} onChange={(e) => setPassword(e.target.value)} required/>
             </div>
           </div>
           <Button type='submit' className='w-[400px]' disabled={loading}>Iniciar sesión</Button>
-          {error && <p className='text-red-500 py-3'>{error}</p>}
         </form>
       </CardContent>
       <CardFooter className='flex flex-col space-y-1.5'>

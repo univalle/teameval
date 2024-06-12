@@ -11,6 +11,7 @@ import { getAuthToken } from '@/util/auth';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { getUserTypeFromToken } from '@/hooks/useAuthRedirect';
+import { RegisterAdmin } from '@/components/admin/register-admin';
 
 export default function Home({ searchParams }) {
   const router = useRouter();
@@ -60,8 +61,10 @@ export default function Home({ searchParams }) {
   } else if (active === 'item3') {
     activeComponent = <RegisterStudent />;
   } else if (active === 'item4') {
-    activeComponent = <RegisterCourse />;
+    activeComponent = <RegisterAdmin />;
   } else if (active === 'item5') {
+    activeComponent = <RegisterCourse />;
+  } else if (active === 'item6') {
     activeComponent = <ImportStudents />;
   } else {
     activeComponent = <ActiveGroups />;
