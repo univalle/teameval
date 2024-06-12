@@ -60,7 +60,7 @@ const useRegisterAdmin = () => {
         console.error('Error:', error);
         toast({
           title: 'Error de red',
-          description: 'Ha ocurrido un error al intentar registrar al profesor. Por favor, inténtalo de nuevo más tarde.',
+          description: 'Ha ocurrido un error al intentar registrar al adminstrador. Por favor, inténtalo de nuevo más tarde.',
           status: 'error',
         });
       } finally {
