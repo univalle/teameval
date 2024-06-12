@@ -1,15 +1,14 @@
-import { useRouter } from 'next/navigation';
-
+import { useRouter } from 'next/navigation'
 
 const useLogout = () => {
-  const router = useRouter();
+  const router = useRouter()
 
   const logout = () => {
-    localStorage.removeItem('token');
-    router.push('/login');
-  };
+    localStorage.removeItem('token')
+    router.push('/login')
+  }
 
-  return logout;
-};
+  return logout
+}
 
-export default useLogout;
+export default useLogout

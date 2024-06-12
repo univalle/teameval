@@ -2,10 +2,10 @@
 
 import Link from 'next/link'
 import { GroupIcon, HomeIcon, SettingsIcon } from './icons'
-import useLogout from '@/hooks/useLogout';
+import useLogout from '@/hooks/useLogout'
 
 export function Sidebar ({ activeItem }) {
-  const logout = useLogout();
+  const logout = useLogout()
   return (
     <aside
       id='sidebar'
@@ -91,14 +91,14 @@ export function Sidebar ({ activeItem }) {
             </Link>
           </li>
           <li>
-      <button
-        onClick={logout}
-        className="flex items-center px-3 py-2 rounded-lg text-slate-900 dark:text-white hover:bg-[#fadede]"
-      >
-        <SettingsIcon className="h-5 w-5" />
-        <span className="flex-1 ml-3 whitespace-nowrap">Cerrar sesión</span>
-      </button>
-    </li>
+            <button
+              onClick={logout}
+              className='flex items-center px-3 py-2 rounded-lg text-slate-900 dark:text-white hover:bg-[#fadede]'
+            >
+              <SettingsIcon className='h-5 w-5' />
+              <span className='flex-1 ml-3 whitespace-nowrap'>Cerrar sesión</span>
+            </button>
+          </li>
         </ul>
       </div>
     </aside>
