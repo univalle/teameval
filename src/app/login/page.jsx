@@ -1,11 +1,7 @@
 import { Login } from '@/components/login'
-// TODO COLORES PERSONALIZADOS DE LA APLICACION SEGUN EL MOCKUP
-// customRed
-// customBlack
-// customGrey
-// activeCustomRed
 
 function login () {
+
   return (
     <div className='grid grid-cols-1 gap-4 xl:grid-cols-2'>
       <img
@@ -13,7 +9,7 @@ function login () {
         alt='estudiantes'
         className='hidden w-full h-[85vh] md:max-h-full xl:block'
       />
-      <div className='flex flex-col items-center justify-center p-8 bg-white'>
+      <div className='flex flex-col items-center justify-center p-8 bg-white object-cover'>
         <img
           src='/images/logoteameval.png'
           alt='logo team eval'
