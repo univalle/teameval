@@ -33,13 +33,13 @@ export function Login() {
               <Label htmlFor='user'>Usuario</Label>
               <Input id='user' placeholder='ejemplo@gmail.com' value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
-            <div className='flex flex-col space-y-1.5'>
+            <div className='flex flex-col space-y-1.5 mb-4'>
               <Label htmlFor='password'>Contraseña</Label>
               <Input id='password' type='password' placeholder='••••••••' value={password} onChange={(e) => setPassword(e.target.value)} />
             </div>
           </div>
           <Button type='submit' className='w-[400px]' disabled={loading}>Iniciar sesión</Button>
-          {error && <p className='text-red-500'>{error}</p>}
+          {error && <p className='text-red-500 py-3'>{error}</p>}
         </form>
       </CardContent>
       <CardFooter className='flex flex-col space-y-1.5'>

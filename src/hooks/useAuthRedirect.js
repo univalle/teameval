@@ -33,12 +33,12 @@ const useAuthRedirect = () => {
   return null; // Este hook no devuelve ningún componente, solo maneja la redirección
 };
 
-const getUserTypeFromToken = (token) => {
+export const getUserTypeFromToken = (token) => {
   const decodedToken = decodeToken(token);
   return decodedToken ? decodedToken.role : null;
 };
 
-const decodeToken = (token) => {
+export const decodeToken = (token) => {
   // Aquí debes decodificar el token JWT, dependiendo de cómo lo hayas codificado en tu aplicación
   // Este es solo un ejemplo simplificado, debes usar la librería adecuada para decodificar el token
   try {
