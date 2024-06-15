@@ -26,7 +26,7 @@ export default function Page () {
         <Separator className='my-6' />
         <Evaluations />
       </CardContent>
-      <CardFooter className='flex justify-between'></CardFooter>
+      <CardFooter className='flex justify-between' />
     </Card>
   )
 }

@@ -33,7 +33,7 @@ export default async function Users () {
           </CardContent>
         </Card>
       </CardContent>
-      <CardFooter className='flex justify-between'></CardFooter>
+      <CardFooter className='flex justify-between' />
     </Card>
   )
 }

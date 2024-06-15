@@ -65,7 +65,7 @@ export default async function Page ({ params }) {
                   <Label htmlFor='role'>Rol</Label>
                   <Select id='role' name='role'>
                     <SelectTrigger>
-                      <SelectValue placeholder='Seleccionar'></SelectValue>
+                      <SelectValue placeholder='Seleccionar' />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value='student'>Estudiante</SelectItem>

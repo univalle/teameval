@@ -35,7 +35,7 @@ export default function CourseCard ({
         </div>
         <p className='text-sm'>{evaluationName}</p>
       </CardContent>
-      <CardFooter className='flex  justify-center p-6 py-0 pb-4'></CardFooter>
+      <CardFooter className='flex  justify-center p-6 py-0 pb-4' />
     </Card>
   )
 }

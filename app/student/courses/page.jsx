@@ -29,7 +29,7 @@ export default function Page () {
       <CardContent>
         <Courses />
       </CardContent>
-      <CardFooter className='flex justify-between'></CardFooter>
+      <CardFooter className='flex justify-between' />
     </Card>
   )
 }

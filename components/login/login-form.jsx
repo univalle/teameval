@@ -37,7 +37,7 @@ export function LoginForm () {
           </Button>
         </form>
       </CardContent>
-      <CardFooter className='flex flex-col space-y-1.5'></CardFooter>
+      <CardFooter className='flex flex-col space-y-1.5' />
     </Card>
   )
 }

@@ -27,7 +27,7 @@ export default function Users () {
       <CardContent>
         <UsersTable />
       </CardContent>
-      <CardFooter className='flex justify-between'></CardFooter>
+      <CardFooter className='flex justify-between' />
     </Card>
   )
 }
