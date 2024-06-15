@@ -9,4 +9,3 @@ export default async function Page ({ params }) {
   revalidatePath('/admin/users')
   redirect('/admin/users')
 }
-export const runtime = 'edge'
